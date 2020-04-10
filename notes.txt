@@ -1,0 +1,5 @@
+Agregar el otros sitio realizado con wordpress, deberia ir en el menu o por ahí
+<!-- <div class="site-header__branding site-branding">
+
+				<?php integer_site_title(); ?>
+			</div> -->

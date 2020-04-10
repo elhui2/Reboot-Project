@@ -7,48 +7,104 @@
  */
 
 ?>
-<footer id="colophon" class="site-footer" role="contentinfo">
-
-	<?php if (has_nav_menu('footer')) : ?>
-
-		<nav class="site-footer__menu footer-menu" role="navigation">
-
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'footer',
-					'depth' => 1,
-					'fallback_cb' => false,
-					'menu_class' => 'footer-menu__list',
-					'container' => false,
-					'link_before' => integer_get_svg(array('icon' => 'chain')) . '<span>',
-					'link_after' => '</span>',
-				)
-			);
-			?>
-
-		</nav>
-
-	<?php endif; ?>
-
-	<div class="site-footer__copy site-copy">
-
-		<?php integer_footer_text(); ?>
-
+<footer>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-pb-sm">
+					<p>
+						<span class="block">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<img src="images/reboot-logo-w.png" width="140"><br><br>
+							<small>Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script></small><br></span>
+					</p>
+				</div>
+				<div class="col-md-4 col-pb-sm right-display">
+					<h2>Síguenos</h2>
+					<p class="colorlib-social-icons colorlib-social-icons2">
+						<a href="https://www.facebook.com/rebootprojectmx/" target="_blank"><i class="icon-facebook4"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </footer>
 </div>
-
+<script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <?php
 wp_footer();
 
 if (get_post_field('post_name', get_post()) == "home") {
 ?>
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/flexslider.css">
+	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.flexslider-min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.easing.1.3.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
 
+	<!-- Counters -->
+	<!-- <script src="js/jquery.countTo.js"></script> -->
+	<!-- Owl Carousel -->
+	<!-- <script src="js/owl.carousel.min.js"></script> -->
+
+	<!-- Main JS (Do not remove) -->
+	<!-- <script src="js/main.js"></script> -->
 	<script>
-		// alert("aqui home");
+		$(function() {
+
+			$('#colorlib-hero .flexslider').flexslider({
+				animation: "fade",
+				slideshowSpeed: 5000,
+				directionNav: true,
+				start: function() {
+					setTimeout(function() {
+						$('.slider-text').removeClass('animated fadeInUp');
+						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					}, 500);
+				},
+				before: function() {
+					setTimeout(function() {
+						$('.slider-text').removeClass('animated fadeInUp');
+						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+					}, 500);
+				}
+
+			});
+			var i = 0;
+			$('.animate-box').waypoint(function(direction) {
+
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+					i++;
+
+					$(this.element).addClass('item-animate');
+					setTimeout(function() {
+
+						$('body .animate-box.item-animate').each(function(k) {
+							var el = $(this);
+							setTimeout(function() {
+								var effect = el.data('animate-effect');
+								if (effect === 'fadeIn') {
+									el.addClass('fadeIn animated');
+								} else {
+									el.addClass('fadeInUp animated');
+								}
+
+								el.removeClass('item-animate');
+							}, k * 200, 'easeInOutExpo');
+						});
+
+					}, 100);
+
+				}
+
+			}, {
+				offset: '85%'
+			});
+		});
 	</script>
 <?php
 }

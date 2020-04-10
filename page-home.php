@@ -9,7 +9,6 @@
 					<div class="row">
 						<div class="col-md-8 col-sm-12 col-md-offset-2 col-md-pull-2 slider-text">
 							<div class="slider-text-inner">
-								<!-- <h2>Nosotros</h2> -->
 								<h1>Diseño y programación de productos digitales.</h1>
 								<p><a class="btn btn-primary btn-learn">Contáctanos</a></p>
 							</div>
@@ -44,24 +43,9 @@
 						</div>
 					</div>
 				</div>
-			<li style="background-image: url(images/coding_main_1.jpg);">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-sm-12 col-md-offset-2 col-md-pull-2 slider-text">
-							<div class="slider-text-inner">
-								<h2>Desarrollo</h2>
-								<h1>Uso de múltiples lenguajes de programación de acuerdo a las necesidades.</h1>
-								<p><a class="btn btn-primary btn-learn">Contáctanos</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
 		</ul>
 	</div>
 </aside>
-
 <div id="colorlib-services">
 	<div class="container">
 		<div class="row">
@@ -84,7 +68,8 @@
 					<span class="icon"><i class="icon-monitor"></i></span>
 					<div class="desc">
 						<h3>Sitios y Aplicaciones Web</h3>
-						<p>Desarrollo y/o customización de templetes, plugins y módulos en diversos lenguajes.</p>
+						<p>Desarrollo y/o customización de templetes, plugins y módulos en diversos lenguajes.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -93,7 +78,8 @@
 					<span class="icon"><i class="icon-home4"></i></span>
 					<div class="desc">
 						<h3>Soliuciones IoT</h3>
-						<p>Prototipo y desarrollo de dispositivos. Monitoreo de ambientes y máquinas. Dashboard personalizado.</p>
+						<p>Prototipo y desarrollo de dispositivos. Monitoreo de ambientes y máquinas. Dashboard
+							personalizado.</p>
 					</div>
 				</div>
 			</div>
@@ -104,7 +90,8 @@
 					<span class="icon"><i class="icon-appleinc"></i></span>
 					<div class="desc">
 						<h3>iOS</h3>
-						<p>Desarrollo y migraciones de Swift, Appcelerator y Flutter. Funciones online y offline</p>
+						<p>Desarrollo y migraciones de Swift, Appcelerator y Flutter. Funciones online y offline
+						</p>
 					</div>
 				</div>
 			</div>
@@ -113,7 +100,8 @@
 					<span class="icon"><i class="icon-android"></i></span>
 					<div class="desc">
 						<h3>Android</h3>
-						<p>Desarrollo y migraciones de Java, Appcelerator y Flutter. Múltiples versiones de Android</p>
+						<p>Desarrollo y migraciones de Java, Appcelerator y Flutter. Múltiples versiones de
+							Android</p>
 					</div>
 				</div>
 			</div>
@@ -122,13 +110,15 @@
 					<span class="icon"><i class="icon-code"></i></span>
 					<div class="desc">
 						<h3>Open Source</h3>
-						<p>Creemos que el código abierto es el futuro y queremos compartir algunas ideas. ¿Participas en algún proyecto? Nos interesa conocer más</p>
+						<p>Creemos que el código abierto es el futuro y queremos compartir algunas ideas.
+							¿Participas en algún proyecto? Nos interesa conocer más</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 <div id="colorlib-work">
 	<div class="container-fluid">
 		<div class="row">
@@ -175,7 +165,8 @@
 					<div class="overlay"></div>
 					<div class="desc">
 						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>UI</span> / <span>Desarrollo Web</span> / <span>Wordpress</span></p>
+						<p class="tag"><span>UI</span> / <span>Desarrollo Web</span> / <span>Wordpress</span>
+						</p>
 						<h3>era, Hotel Tulum</h3>
 						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
 					</div>
@@ -197,7 +188,8 @@
 					<div class="overlay"></div>
 					<div class="desc">
 						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>UX</span> / <span>UI</span> / <span>Desarrollo Móvil</span> / <span>Android</span></p>
+						<p class="tag"><span>UX</span> / <span>UI</span> / <span>Desarrollo Móvil</span> /
+							<span>Android</span></p>
 						<h3>Trade News App</h3>
 						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
 					</div>
@@ -207,73 +199,4 @@
 	</div>
 </div>
 
-<div id="colorlib-testimony">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center animate-box intro-heading">
-				<h2>Datos Curiosos</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row animate-box">
-					<div class="owl-carousel1">
-						<div class="item">
-							<div class="testimony-slide text-center active">
-								<blockquote>
-									<p>Los humanos ocupamos el 49% del Internet, y el 51% restante de todo el tráfico en la web proviene de bots.</p>
-								</blockquote>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-slide text-center active">
-								<blockquote>
-									<p>Aproximadamente 300 horas de vídeo se suben a YouTube cada minuto, y la gente de todo el mundo mira cientos de millones de horas de vídeos en YouTube al día.</p>
-								</blockquote>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-slide text-center active">
-								<blockquote>
-									<p>Alrededor del 16 al 20% de las búsquedas que sea hacen en Google cada día, son originales, y nunca se han hecho antes.</p>
-								</blockquote>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="colorlib-hire" class="colorlib-light-grey">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box">
-				<h2 class="heading">Te gustaría contactarnos?</h2>
-				<p><a href="mailto:info@rebootproject.mx" class="btn btn-primary btn-lg"><span class="icon"><i class="icon-mail5"></i></span>Envíanos un correo</a></p>
-			</div>
-		</div>
-	</div>
-</div>
-
 <?php get_footer(); ?>
-
-
-<!-- jQuery -->
-<!-- <script src="js/jquery.min.js"></script> -->
-<!-- jQuery Easing -->
-<!-- <script src="js/jquery.easing.1.3.js"></script> -->
-<!-- Bootstrap -->
-<!-- <script src="js/bootstrap.min.js"></script> -->
-<!-- Waypoints -->
-<!-- <script src="js/jquery.waypoints.min.js"></script> -->
-<!-- Flexslider -->
-<!-- <script src="js/jquery.flexslider-min.js"></script> -->
-<!-- Counters -->
-<!-- <script src="js/jquery.countTo.js"></script> -->
-<!-- Owl Carousel -->
-<!-- <script src="js/owl.carousel.min.js"></script> -->
-
-<!-- Main JS (Do not remove) -->
-<!-- <script src="js/main.js"></script> -->

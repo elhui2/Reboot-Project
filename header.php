@@ -2,7 +2,8 @@
 
 /**
  * The template for displaying the header.
- *
+ * @version 0.2
+ * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Integer
  */
 
@@ -16,12 +17,12 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<nav id="colorlib-main-nav" role="navigation">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<?php
@@ -53,16 +54,10 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<!-- <a class="colorlib-logo" href="index.html">Reboot</a> -->
 							<?php integer_site_logo(); ?>
 						</div>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 					</div>
-					
 				</div>
 			</div>
-			<!-- <div class="site-header__branding site-branding">
-
-				<?php integer_site_title(); ?>
-			</div> -->
 		</header>
