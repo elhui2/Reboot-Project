@@ -38,9 +38,11 @@
 <?php
 wp_footer();
 
-if (get_post_field('post_name', get_post()) == "home") {
+if (is_home()) {
+	
 ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/flexslider.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
 	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.flexslider-min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.easing.1.3.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>

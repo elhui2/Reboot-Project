@@ -1,4 +1,13 @@
-<?php get_header() ?>
+<?php
+
+/**
+ * page-home.php
+ * @author Daniel Huidobro daniel@rebootproject.mx
+ * @version 0.3
+ * Homepage
+ */
+get_header()
+?>
 
 <aside id="colorlib-hero">
 	<div class="flexslider">
@@ -43,6 +52,7 @@
 						</div>
 					</div>
 				</div>
+			</li>
 		</ul>
 	</div>
 </aside>
@@ -126,75 +136,36 @@
 				<h2>Nuestro Trabajo</h2>
 			</div>
 		</div>
+
 		<div class="row">
-			<div class="col-md-6 animate-box text-center">
-				<a href="honeywell-rewards.html" class="work-img" style="background-image: url(images/HWR-0.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>Desarrollo Web</span> / <span>PHP</span></p>
-						<h3>Honeywell Rewards</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 animate-box text-center">
-				<a href="proyecto-vinicola.html" class="work-img" style="background-image: url(images/PV-1.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>UX</span> / <span>UI</span> / <span>Desarrollo Web</span></p>
-						<h3>Proyecto Vinícola</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 animate-box text-center">
-				<a href="corev.html" class="work-img" style="background-image: url(images/Corev-0.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>Desarrollo Móvil</span> / <span>Android</span></p>
-						<h3>Corev</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 animate-box text-center">
-				<a href="era-hotel.html" class="work-img" style="background-image: url(images/era-0.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>UI</span> / <span>Desarrollo Web</span> / <span>Wordpress</span>
-						</p>
-						<h3>era, Hotel Tulum</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 animate-box text-center">
-				<a href="brandgement.html" class="work-img" style="background-image: url(images/BMT-0.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>Desarrollo Web</span> / <span>PHP</span></p>
-						<h3>Brandgement</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-6 animate-box text-center">
-				<a href="tradenews.html" class="work-img" style="background-image: url(images/TN-1.jpg);">
-					<div class="overlay"></div>
-					<div class="desc">
-						<span class="icon"><i class="icon-heart-outline"></i></span>
-						<p class="tag"><span>UX</span> / <span>UI</span> / <span>Desarrollo Móvil</span> /
-							<span>Android</span></p>
-						<h3>Trade News App</h3>
-						<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
-					</div>
-				</a>
-			</div>
+			<?php
+			$args = array(
+				'post_type' => array('page'),
+				'meta_kay' => 'page_type',
+				'meta_query' => array(
+					array(
+						'key' => 'page_type',
+						'value' => 'work',
+					)
+				)
+			);
+
+			$myposts = query_posts($args);
+			foreach ($myposts as $post) : ?>
+				<div class="col-md-6 animate-box text-center">
+					<a href="<?php the_permalink(); ?>" class="work-img" style="background-image: url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0]; ?>')">
+						<div class="overlay"></div>
+						<div class="desc">
+							<span class="icon"><i class="icon-heart-outline"></i></span>
+							<p class="tag"><span>Desarrollo Web</span> / <span>PHP</span></p>
+							<h3><?php the_title(); ?></h3>
+							<span class="read-more">Leer más <i class="icon-arrow-right3"></i></span>
+						</div>
+					</a>
+				</div>
+			<?php endforeach;
+			wp_reset_postdata();
+			?>
 		</div>
 	</div>
 </div>

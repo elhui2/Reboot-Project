@@ -1,4 +1,4 @@
-# Reboot Project 0.1
+# Reboot Project 0.3
 
 Fork de Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
@@ -19,3 +19,9 @@ Fork de Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
 **Who is this theme for?**  
 Bloggers, developers, and everybody who values a no-bells-and-whistles approach to blogging.
+
+### Changes in this version
+- Pages with custom page_type==work are loaded into homepage
+
+### TODO:
+- Make a custom layout for pages with page_type==work
