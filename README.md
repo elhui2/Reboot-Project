@@ -1,6 +1,6 @@
-# Reboot Project 0.3
+# Reboot Project 0.4
 
-Fork de Integer de https://wordpress.org/themes/integer/ from Theme Patio
+Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
 ## Installation
 
@@ -22,6 +22,7 @@ Bloggers, developers, and everybody who values a no-bells-and-whistles approach 
 
 ### Changes in this version
 - Pages with custom page_type==work are loaded into homepage
+- Make a custom layout for pages with page_type==work
 
 ### TODO:
-- Make a custom layout for pages with page_type==work
+- Layout of categories and blog page
