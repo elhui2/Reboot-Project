@@ -1,15 +1,17 @@
 <?php
 
 /**
- * Integer functions and definitions.
- *
- * @package Integer
+ * Reboot Project functions and definitions.
+ * @version 0.4
+ * @author Noel Lopez noel@rebootproject.mx
+ * @author Daniel Huidobro daniel@rebootproject.mx
+ * @package Reboot Project
  */
 
 /**
  * The current version of the theme.
  */
-define('INTEGER_VERSION', '1.2.0');
+define('REBOOT_PROJECT', '0.4');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -23,6 +25,13 @@ function integer_content_width()
 	$GLOBALS['content_width'] = apply_filters('integer_content_width', 2560);
 }
 add_action('after_setup_theme', 'integer_content_width', 0);
+
+//Thumbnails for Reboot Project
+add_action('after_setup_theme', 'reboot_thumbs', 0);
+function reboot_thumbs()
+{
+	add_image_size('rp-featured', 480, 252, true);
+}
 
 if (!function_exists('integer_setup')) :
 	/**
@@ -76,7 +85,7 @@ if (!function_exists('integer_setup')) :
 
 		// This theme styles the visual editor to resemble the theme style.
 		add_editor_style(array('assets/css/editor-style.css'));
-		
+
 
 		// Add support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
@@ -206,7 +215,7 @@ function integer_scripts()
 		'integer-fonts',
 		integer_fonts_url(),
 		array(),
-		INTEGER_VERSION,
+		REBOOT_PROJECT,
 		false
 	);
 
@@ -214,7 +223,7 @@ function integer_scripts()
 		'integer-style',
 		get_stylesheet_uri(),
 		array(),
-		INTEGER_VERSION,
+		REBOOT_PROJECT,
 		false
 	);
 
@@ -224,7 +233,7 @@ function integer_scripts()
 		'integer-js',
 		get_template_directory_uri() . '/assets/js/theme.js',
 		false,
-		INTEGER_VERSION,
+		REBOOT_PROJECT,
 		true
 	);
 
@@ -259,7 +268,7 @@ function integer_customize_preview_js()
 		'integer-customize-preview',
 		get_template_directory_uri() . '/assets/js/customize-preview.js',
 		array('customize-preview'),
-		INTEGER_VERSION,
+		REBOOT_PROJECT,
 		true
 	);
 }
@@ -311,4 +320,4 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/class-integer-customize-control-message.php';
 
-wp_enqueue_style( 'icon-moon', get_template_directory_uri() . '/assets/css/icon-moon.css',false,'1.1','all');
+wp_enqueue_style('icon-moon', get_template_directory_uri() . '/assets/css/icon-moon.css', false, '1.1', 'all');

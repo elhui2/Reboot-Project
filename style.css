@@ -19,6 +19,15 @@
   background-image: url("assets/images/coding_main_2.jpg");
 }
 
+img {
+  max-width: 100%;
+}
+.colorlib-nav-toggle i.dark,
+.colorlib-nav-toggle i.dark::before,
+.colorlib-nav-toggle i.dark::after {
+  background: #000;
+}
+
 /* =======================================================
 *
 * 	A partir de aquí el template hecho por noxdya

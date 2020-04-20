@@ -1,9 +1,11 @@
 <?php
 
 /**
- * The template for displaying the footer.
- *
- * @package Integer
+ * Footer reboot project
+ * @version 0.4
+ * @author Noel Lopez noel@rebootproject.mx
+ * @author Daniel Huidobro daniel@rebootproject.mx
+ * @package Reboot Project
  */
 
 ?>
@@ -15,8 +17,8 @@
 					<p>
 						<span class="block">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							<img src="images/reboot-logo-w.png" width="140"><br><br>
-							<small>Copyright &copy;
+							<?php integer_site_logo(); ?><br>
+							<small>Made with <a href="https://github.com/elhui2/Reboot-Project"><i class="fas fa-heart"></i> Copyleft</a> &copy;
 								<script>
 									document.write(new Date().getFullYear());
 								</script></small><br></span>
@@ -39,7 +41,7 @@
 wp_footer();
 
 if (is_home()) {
-	
+
 ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/flexslider.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">

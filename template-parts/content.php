@@ -1,40 +1,35 @@
 <?php
+
 /**
- * The default template used for displaying post content in index.php.
- *
- * @package Integer
+ * The default template used for displaying post content in index.php
+ * @version 0.4
+ * @author Noel Lopez noel@rebootproject.mx
+ * @author Daniel Huidobro daniel@rebootproject.mx
+ * @package Reboot Project
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'blogroll__item blogroll-item' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('row blogroll-item'); ?>>
 
-	<?php integer_post_thumbnail_archive(); ?>
-
-	<header class="blogroll-item__header">
-
-		<?php the_title( sprintf( '<h2 class="blogroll-item__title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-	</header>
-
-	<?php integer_entry_meta_index(); ?>
-
-	<div class="blogroll-item__content">
-
+	<div class="col-sm-10 offset-md-1">
+		<?php the_post_thumbnail("medium_large"); ?>
+		<?php the_title(sprintf('<h2 class="blogroll-item__title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+		<?php //integer_entry_meta_index(); 
+		?>
 		<?php
-			// Translators: %s is the title of the post.
-			the_content( sprintf( __( 'Continue reading %s', 'integer' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
+		// Translators: %s is the title of the post.
+		the_excerpt(sprintf(__('Continue reading %s', 'integer'), the_title('<span class="screen-reader-text">"', '"</span>', false)));
 		?>
 
 		<?php
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'integer' ),
-					'after' => '</div>',
-				)
-			);
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __('Pages:', 'integer'),
+				'after' => '</div>',
+			)
+		);
 		?>
 
 	</div>
-
 </article>

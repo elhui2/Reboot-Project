@@ -2,9 +2,10 @@
 
 /**
  * The template for displaying the header.
- * @version 0.2
+ * @version 0.4
+ * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
- * @package Integer
+ * @package Reboot Project
  */
 
 ?>
@@ -54,9 +55,17 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<?php integer_site_logo(); ?>
+
+							<?php
+							if (is_front_page()) {
+								integer_site_logo();
+							} else {  ?>
+								<a href="<?php echo get_site_url() ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_light.png" width="200"></a>
+							<?php
+							}
+							?>
 						</div>
-						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i <?php echo (!is_front_page()) ? "class='dark'" : "" ?>></i></a>
 					</div>
 				</div>
 			</div>

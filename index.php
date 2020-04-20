@@ -1,33 +1,33 @@
 <?php
+
 /**
  * The main template file.
- *
- * @package Integer
+ * @version 0.4
+ * @author Noel Lopez noel@rebootproject.mx
+ * @author Daniel Huidobro daniel@rebootproject.mx
+ * @package Reboot Project
  */
 
 get_header(); ?>
 
-<div id="main" class="site-main blogroll">
+<div id="main" class="container">
+	<div class="row">
+		<?php if (have_posts()) : ?>
 
-	<?php if ( have_posts() ) : ?>
-
-		<div class="blogroll__wrap blogroll__wrap--<?php integer_grid_class(); ?>">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content' ); ?>
-
+			<?php while (have_posts()) : the_post(); ?>
+				<div class="col-lg-6 rp-<?php integer_grid_class(); ?>">
+					<?php get_template_part('template-parts/content'); ?>
+				</div>
 			<?php endwhile; ?>
 
-		</div>
+			<?php integer_posts_pagination('blogroll__pagination'); ?>
 
-		<?php integer_posts_pagination( 'blogroll__pagination' ); ?>
+		<?php else : ?>
 
-	<?php else : ?>
+			<?php get_template_part('template-parts/content', 'none'); ?>
 
-		<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-	<?php endif; ?>
+		<?php endif; ?>
+	</div>
 
 </div>
 
