@@ -389,46 +389,57 @@ function integer_post_navigation()
 }
 
 /**
- * Displays Posts Pagination.
- *
+ * Bootstrap Posts Pagination.
+ * @version 0.5.0
  * @param string $class Class to apply to a pagination element.
  */
-function integer_posts_pagination($class = '')
+function bootstrap_posts_pagination(\WP_Query $wp_query = null, $echo = true, $params = [])
 {
-	$class = $class ? $class . ' pagination' : 'pagination';
+	global $wp_query;
 
-	$args = array(
-		'prev_text' => integer_get_svg(array('icon' => 'arrow-left')) . __('Prev', 'integer'),
-		'next_text' => __('Next', 'integer') . integer_get_svg(array('icon' => 'arrow-right')),
-		'echo' => false,
+	$add_args = [];
+
+	//add query (GET) parameters to generated page URLs
+	/*if (isset($_GET[ 'sort' ])) {
+        $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
+    }*/
+
+	$pages = paginate_links(
+		array_merge([
+			'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+			'format'       => '?paged=%#%',
+			'current'      => max(1, get_query_var('paged')),
+			'total'        => $wp_query->max_num_pages,
+			'type'         => 'array',
+			'show_all'     => false,
+			'end_size'     => 3,
+			'mid_size'     => 1,
+			'prev_next'    => true,
+			'prev_text'    => __('« Prev'),
+			'next_text'    => __('Next »'),
+			'add_args'     => $add_args,
+			'add_fragment' => ''
+		], $params)
 	);
 
-	$pagination = paginate_links($args);
+	if (is_array($pages)) {
+		//$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
+		$pagination = '<nav><ul class="pagination justify-content-center">';
 
-	if (!$pagination) {
-		return;
+		foreach ($pages as $page) {
+			$pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+		}
+
+		$pagination .= '</ul></nav>';
+
+		if ($echo) {
+			echo $pagination;
+		} else {
+			return $pagination;
+		}
 	}
 
-	// BEM style classes.
-	$pagination = str_replace(
-		array(
-			'prev page-numbers',
-			'next page-numbers',
-			'page-numbers current',
-			'page-numbers dots',
-			'page-numbers',
-		),
-		array(
-			'pagination__item pagination__item--prev',
-			'pagination__item pagination__item--next',
-			'pagination__item pagination__item--current',
-			'pagination__item pagination__item--dots',
-			'pagination__item',
-		),
-		$pagination
-	);
-
-	printf('<nav class="%s">%s</nav>', esc_attr($class), $pagination); // wpcs: xss ok.
+	return null;
 }
 
 /**

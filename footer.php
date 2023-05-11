@@ -2,7 +2,7 @@
 
 /**
  * Footer reboot project
- * @version 0.4
+ * @version 0.5.1
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
@@ -21,13 +21,15 @@
 							<small>Made with <a href="https://github.com/elhui2/Reboot-Project"><i class="fas fa-heart"></i> Copyleft</a> &copy;
 								<script>
 									document.write(new Date().getFullYear());
-								</script></small><br></span>
+								</script>
+							</small><br>
+						</span>
 					</p>
 				</div>
 				<div class="col-md-4 col-pb-sm right-display">
 					<h2>Síguenos</h2>
 					<p class="colorlib-social-icons colorlib-social-icons2">
-						<a href="https://www.facebook.com/rebootprojectmx/" target="_blank"><i class="icon-facebook4"></i></a>
+						<a href="https://www.facebook.com/rebootprojectmx/" target="_blank"><span style="font-size: 48px; color:white" class="dashicons dashicons-facebook"></span></i></a>
 					</p>
 				</div>
 			</div>

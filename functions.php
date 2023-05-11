@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.4
+ * @version 0.5.1
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
@@ -11,7 +11,7 @@
 /**
  * The current version of the theme.
  */
-define('REBOOT_PROJECT', '0.4');
+define('REBOOT_PROJECT', '0.5.1');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -320,4 +320,9 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/class-integer-customize-control-message.php';
 
-wp_enqueue_style('icon-moon', get_template_directory_uri() . '/assets/css/icon-moon.css', false, '1.1', 'all');
+// wp_enqueue_style('icon-moon', get_template_directory_uri() . '/assets/css/icon-moon.css', false, '1.1', 'all');
+
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+   wp_enqueue_style( 'dashicons' );
+}

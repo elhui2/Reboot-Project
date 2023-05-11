@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<div id="main" class="site-main">
+
 
 	<?php while (have_posts()) : the_post(); ?>
 
@@ -28,7 +28,6 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-</div>
 
 <?php //get_sidebar(); 
 ?>

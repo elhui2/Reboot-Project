@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('row blogroll-item'); ?>>
 
 	<div class="col-sm-10 offset-md-1">
-		<?php the_post_thumbnail("medium_large"); ?>
+		<a href="<?php echo esc_url(get_permalink()) ?>"><img src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:100%"></a>
 		<?php the_title(sprintf('<h2 class="blogroll-item__title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
 		<?php //integer_entry_meta_index(); 
 		?>

@@ -37,7 +37,7 @@ get_header(); ?>
 
 		</div>
 
-		<?php integer_posts_pagination( 'blogroll__pagination' ); ?>
+		<?php bootstrap_posts_pagination(); ?>
 
 	<?php else : ?>
 

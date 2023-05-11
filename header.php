@@ -1,8 +1,8 @@
 <?php
 
 /**
- * The template for displaying the header.
- * @version 0.4
+ * header.php
+ * @version 0.5.1
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
@@ -17,13 +17,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
 	<nav id="colorlib-main-nav" role="navigation">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white" class="dashicons dashicons-no"></span></a>
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<?php
@@ -59,13 +59,17 @@
 							<?php
 							if (is_front_page()) {
 								integer_site_logo();
-							} else {  ?>
-								<a href="<?php echo get_site_url() ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_light.png" width="200"></a>
+							} else {
+								integer_site_logo(); ?>
+
+								<!-- <a href="<?php echo get_site_url() ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_light.png" width="200"></a> -->
 							<?php
 							}
 							?>
 						</div>
-						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i <?php echo (!is_front_page()) ? "class='dark'" : "" ?>></i></a>
+						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" style="text-decoration: none;">
+							<span style="margin:0; color:white" class="dashicons dashicons-menu-alt3"></span>
+						</a>
 					</div>
 				</div>
 			</div>
