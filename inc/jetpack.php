@@ -3,6 +3,7 @@
  * Jetpack Compatibility File.
  *
  * @package Integer
+ * @deprecated since V 0.6.0
  */
 
 /**

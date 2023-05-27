@@ -1,3 +1,21 @@
+/*
+Theme Name: Reboot Project
+Theme URI: https://github.com/elhui2/Reboot-Project
+Author: Reboot Project
+Author URI: https://www.rebootproject.mx/
+Description: Minimalist template
+Tags: blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 0.6.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rebootproject
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @font-face {
   font-family: "icomoon";
   src: url("assets/fonts/icomoon/icomoon.eot?srf3rx");
@@ -12,9 +30,11 @@
 .slide0 {
   background-image: url("assets/images/coding_main_0.jpg");
 }
+
 .slide1 {
   background-image: url("assets/images/coding_main_1.jpg");
 }
+
 .slide2 {
   background-image: url("assets/images/coding_main_2.jpg");
 }
@@ -22,6 +42,7 @@
 img {
   max-width: 100%;
 }
+
 .colorlib-nav-toggle i.dark,
 .colorlib-nav-toggle i.dark::before,
 .colorlib-nav-toggle i.dark::after {
@@ -57,7 +78,7 @@ body.menu-show {
   overflow: hidden;
 }
 
-#colorlib-wrapper > div {
+#colorlib-wrapper>div {
   width: 100%;
   height: 100%;
   overflow-y: hidden;
@@ -346,35 +367,35 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   z-index: 9;
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner {
   height: 700px !important;
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner {
   display: table-cell;
   vertical-align: middle;
   height: 700px;
 }
 
 @media screen and (max-width: 768px) {
-  #colorlib-hero .flexslider .slider-text > .slider-text-inner {
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner {
     text-align: center;
   }
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner span i {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner span i {
   font-size: 24px;
   color: #f7af1d;
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner h1,
-#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner h1,
+#colorlib-hero .flexslider .slider-text>.slider-text-inner h2 {
   margin: 0;
   padding: 0;
   color: white;
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
   margin-bottom: 50px;
   font-size: 52px;
   font-weight: 400;
@@ -382,12 +403,12 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 }
 
 @media screen and (max-width: 768px) {
-  #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner h1 {
     font-size: 28px;
   }
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner h2 {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -397,40 +418,40 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 }
 
 @media screen and (max-width: 768px) {
-  #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner h2 {
     letter-spacing: 0;
     text-transform: none;
   }
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 a {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner h2 a {
   color: #ea831c;
   border-bottom: 1px solid rgba(234, 131, 28, 0.7);
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner .heading-section {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner .heading-section {
   font-size: 50px;
 }
 
 @media screen and (max-width: 768px) {
-  #colorlib-hero .flexslider .slider-text > .slider-text-inner .heading-section {
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner .heading-section {
     font-size: 30px;
   }
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner .btn {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
 }
 
-#colorlib-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
+#colorlib-hero .flexslider .slider-text>.slider-text-inner .btn:hover {
   background: #000 !important;
 }
 
 @media screen and (max-width: 480px) {
-  #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
+  #colorlib-hero .flexslider .slider-text>.slider-text-inner .btn {
     width: 100%;
   }
 }
@@ -745,6 +766,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   .blog-flex .f-blog {
     margin-bottom: 2em;
   }
+
   .blog-flex .f-blog:first-child {
     margin-bottom: 2em;
   }

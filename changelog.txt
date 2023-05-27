@@ -1,0 +1,5 @@
+V 0.5.1
+
+- Pages with custom page_type==work are loaded into homepage
+- Make a custom layout for pages with page_type==work
+- We 

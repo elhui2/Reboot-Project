@@ -5,7 +5,7 @@
  * @version 0.4
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
- * @package Reboot Project
+ * @package RebootProject
  */
 
 get_header(); ?>

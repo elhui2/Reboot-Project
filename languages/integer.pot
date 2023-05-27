@@ -100,60 +100,60 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/customizer.php:25
+#: inc/typography.php:25
 msgid "Use rounded corners"
 msgstr ""
 
-#: inc/customizer.php:38
+#: inc/typography.php:38
 msgid "Use Gravatar as Logo"
 msgstr ""
 
 #. translators: placeholder shows the site admin email.
-#: inc/customizer.php:41
+#: inc/typography.php:41
 msgid "Use your gravatar associated with <strong>%s</strong> as a site logo image. This will override the logo set manually."
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/typography.php:41
 msgid "https://en.gravatar.com/support/what-is-gravatar/"
 msgstr ""
 
-#: inc/customizer.php:41
+#: inc/typography.php:41
 msgid "What is Gravatar?"
 msgstr ""
 
-#: inc/customizer.php:66
+#: inc/typography.php:66
 msgid "Extra Features"
 msgstr ""
 
-#: inc/customizer.php:68
+#: inc/typography.php:68
 msgid "Like Integer? Then check out the Pro version! It has some extra features to help you level-up your blog."
 msgstr ""
 
-#: inc/customizer.php:76
+#: inc/typography.php:76
 msgid "1. Custom Colors"
 msgstr ""
 
-#: inc/customizer.php:79
+#: inc/typography.php:79
 msgid "Pro version allows you to set your own colors for text, headings, links, and background."
 msgstr ""
 
-#: inc/customizer.php:89
+#: inc/typography.php:89
 msgid "2. Two-column Layout"
 msgstr ""
 
-#: inc/customizer.php:92
+#: inc/typography.php:92
 msgid "With the pro version, you can set the blog layout to display posts in a two-column grid."
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/typography.php:102
 msgid "3. Custom Footer Message"
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/typography.php:105
 msgid "With Integer Pro, you can set your own footer message."
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/typography.php:107
 msgid "Learn More"
 msgstr ""
 

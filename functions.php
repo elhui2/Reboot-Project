@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.5.1
+ * @version 0.6.0
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
@@ -11,7 +11,7 @@
 /**
  * The current version of the theme.
  */
-define('REBOOT_PROJECT', '0.5.1');
+define('REBOOT_PROJECT', '0.6.0');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -91,25 +91,25 @@ if (!function_exists('integer_setup')) :
 		add_theme_support('customize-selective-refresh-widgets');
 
 		// Add Content Options feature.
-		add_theme_support('jetpack-content-options', array(
-			'blog-display' => 'content',
-			'post-details' => array(
-				'stylesheet' => 'integer-style',
-				'date' => '.posted-on',
-				'categories' => '.cat-links',
-				'tags' => '.tags-links',
-				'author' => '.byline',
-				'comment' => '.comments-link',
-			),
-			'featured-images' => array(
-				'archive' => true,
-				'archive-default' => true,
-				'post' => true,
-				'post-default' => true,
-				'page' => true,
-				'page-default' => false,
-			),
-		));
+		// add_theme_support('jetpack-content-options', array(
+		// 	'blog-display' => 'content',
+		// 	'post-details' => array(
+		// 		'stylesheet' => 'integer-style',
+		// 		'date' => '.posted-on',
+		// 		'categories' => '.cat-links',
+		// 		'tags' => '.tags-links',
+		// 		'author' => '.byline',
+		// 		'comment' => '.comments-link',
+		// 	),
+		// 	'featured-images' => array(
+		// 		'archive' => true,
+		// 		'archive-default' => true,
+		// 		'post' => true,
+		// 		'post-default' => true,
+		// 		'page' => true,
+		// 		'page-default' => false,
+		// 	),
+		// ));
 
 		// Add support for Pageviews plugin.
 		add_theme_support('pageviews');
@@ -277,23 +277,23 @@ add_action('customize_preview_init', 'integer_customize_preview_js');
 /**
  * Disable Jetpack styles.
  */
-function integer_disable_scripts()
-{
-	if (wp_style_is('the-neverending-homepage', 'registered')) {
-		wp_deregister_style('the-neverending-homepage');
-	}
-}
-add_filter('jetpack_implode_frontend_css', '__return_false');
-add_action('wp_enqueue_scripts', 'integer_disable_scripts');
+// function integer_disable_scripts()
+// {
+// 	if (wp_style_is('the-neverending-homepage', 'registered')) {
+// 		wp_deregister_style('the-neverending-homepage');
+// 	}
+// }
+// add_filter('jetpack_implode_frontend_css', '__return_false');
+// add_action('wp_enqueue_scripts', 'integer_disable_scripts');
 
 /**
  * Remove Jetpack Contact Form CSS.
  */
-function integer_disable_jetpack_contact_form_css()
-{
-	wp_deregister_style('grunion.css');
-}
-add_action('wp_print_styles', 'integer_disable_jetpack_contact_form_css');
+// function integer_disable_jetpack_contact_form_css()
+// {
+// 	wp_deregister_style('grunion.css');
+// }
+// add_action('wp_print_styles', 'integer_disable_jetpack_contact_form_css');
 
 /**
  * Custom template tags for this theme.
@@ -306,14 +306,14 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer settings.
+ * Typography settings.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/typography.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+// require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Customizer Custom Controls.
@@ -322,7 +322,8 @@ require get_template_directory() . '/inc/class-integer-customize-control-message
 
 // wp_enqueue_style('icon-moon', get_template_directory_uri() . '/assets/css/icon-moon.css', false, '1.1', 'all');
 
-add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
-function load_dashicons_front_end() {
-   wp_enqueue_style( 'dashicons' );
+add_action('wp_enqueue_scripts', 'load_dashicons_front_end');
+function load_dashicons_front_end()
+{
+	wp_enqueue_style('dashicons');
 }
