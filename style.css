@@ -5,7 +5,7 @@ Author: Reboot Project
 Author URI: https://www.rebootproject.mx/
 Description: Minimalist template
 Tags: blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.6.0
+Version: 0.6.1
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -56,7 +56,6 @@ img {
 *
 * ======================================================= */
 body {
-  font-family: "Inconsolata", monospace;
   line-height: 1.8;
   font-size: 20px;
   background: #f0f0f0;
@@ -85,6 +84,12 @@ body.menu-show {
 }
 
 a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* a {
   color: #ea831c;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -99,12 +104,12 @@ a:focus,
 a:active {
   outline: none;
 }
+ */
 
 p,
 span {
   margin-bottom: 1.5em;
   font-weight: 400;
-  font-family: "Inconsolata", monospace;
 }
 
 span {
@@ -118,8 +123,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgba(0, 0, 0, 0.8);
-  font-family: "Inconsolata", monospace;
   font-weight: 400;
   margin: 0 0 30px 0;
 }
@@ -262,7 +265,6 @@ h6 {
 
 header {
   padding: 1rem 0;
-  background-color: #000;
   margin: 0 0 1em 0;
 }
 
@@ -1515,7 +1517,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   font-size: 60px;
   display: block;
   color: black;
-  font-family: "Inconsolata", monospace;
   width: 100%;
   font-weight: 400;
   margin-bottom: 0.3em;
@@ -1527,7 +1528,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   display: block;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-family: "Inconsolata", monospace;
   font-weight: 400;
   color: gray;
 }
@@ -1597,7 +1597,6 @@ input[type="text"] {
   padding: 3em 0;
   display: block;
   width: 100%;
-  background: #000;
 }
 
 #footer h2 {
@@ -1702,4 +1701,12 @@ input[type="text"] {
   -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
   margin: 32px 0;
+}
+
+/* Estilos 2090 */
+
+.wp-block-code {
+  font-family: monospace;
+  background-color: #000000;
+  color: #41FF00;
 }

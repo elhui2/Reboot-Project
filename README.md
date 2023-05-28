@@ -1,4 +1,4 @@
-# Reboot Project 0.6.0
+# Reboot Project 0.6.1
 
 Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 

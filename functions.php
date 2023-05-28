@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.6.0
+ * @version 0.6.1
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
@@ -306,9 +306,19 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * General settings of template.
+ */
+require get_template_directory() . '/inc/settings.php';
+
+/**
  * Typography settings.
  */
 require get_template_directory() . '/inc/typography.php';
+
+/**
+ * Colors settings.
+ */
+require get_template_directory() . '/inc/colors.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -327,3 +337,42 @@ function load_dashicons_front_end()
 {
 	wp_enqueue_style('dashicons');
 }
+/**
+ * add_rbpj_settings
+ * @version 0.6.1
+ */
+function add_rbpj_settings()
+{
+	if (!is_admin()) {
+		// Colors
+		$rbpj_primary_background = get_theme_mod('rbpj_primary_background');
+		$rbpj_headers_color = get_theme_mod('rbpj_headers_color');
+		$rbpj_links_color = get_theme_mod('rbpj_links_color');
+
+		// Typography
+		$rbpj_primary_typography = get_theme_mod('rbpj_primary_typography');
+		$rbpj_secondary_typography = get_theme_mod('rbpj_secondary_typography');
+
+
+		$rbpj_css_settings = file_get_contents(get_template_directory() . '/assets/css/rbpj-settings-unformatted.css');
+
+		$rbpj_css_settings = str_replace("[rbpj_primary_background]", $rbpj_primary_background, $rbpj_css_settings);
+		$rbpj_css_settings = str_replace("[rbpj_headers_color]", $rbpj_headers_color, $rbpj_css_settings);
+		$rbpj_css_settings = str_replace("[rbpj_links_color]", $rbpj_links_color, $rbpj_css_settings);
+
+		$rbpj_css_settings = str_replace("[rbpj_primary_typography]", $rbpj_primary_typography, $rbpj_css_settings);
+		$rbpj_css_settings = str_replace("[rbpj_secondary_typography]", $rbpj_secondary_typography, $rbpj_css_settings);
+
+
+
+		file_put_contents(get_template_directory() . '/assets/css/rbpj-settings.css', $rbpj_css_settings);
+
+		wp_enqueue_style(
+			'rbpj-settings',
+			get_stylesheet_directory_uri() . "/assets/css/rbpj-settings.css",
+			array(),
+			$rbpj_css_settings
+		);
+	}
+}
+add_action('init', 'add_rbpj_settings');

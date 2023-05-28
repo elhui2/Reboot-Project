@@ -1,0 +1,36 @@
+/* 
+rbpj-settings-unformatted.css
+version: 0.6.1 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=[rbpj_primary_typography]');
+@import url('https://fonts.googleapis.com/css?family=[rbpj_secondary_typography]');
+
+body {
+    font-family: '[rbpj_secondary_typography]';
+}
+
+#footer,
+#rbpj-mainnav {
+    background-color: [rbpj_primary_background];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: [rbpj_headers_color];
+    font-family: '[rbpj_primary_typography]';
+}
+
+a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: [rbpj_links_color];
+}

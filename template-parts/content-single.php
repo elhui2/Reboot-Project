@@ -10,7 +10,7 @@
 get_header()
 ?>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<img src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:100%">
 
