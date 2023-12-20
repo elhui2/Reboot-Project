@@ -2,16 +2,15 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.6.1
- * @author Noel Lopez noel@rebootproject.mx
+ * @version 0.6.5
  * @author Daniel Huidobro daniel@rebootproject.mx
- * @package Reboot Project
+ * @package rebootproject
  */
 
 /**
  * The current version of the theme.
  */
-define('REBOOT_PROJECT', '0.6.0');
+define('REBOOT_PROJECT', '0.6.5');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -321,9 +320,9 @@ require get_template_directory() . '/inc/typography.php';
 require get_template_directory() . '/inc/colors.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Social settings
  */
-// require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/social.php';
 
 /**
  * Customizer Custom Controls.

@@ -2,19 +2,19 @@
 
 /**
  * The template used for displaying post content in single.php.
- * @version 0.5.1
- * @author Noel Lopez noel@rebootproject.mx
+ * @version 0.6.5
  * @author Daniel Huidobro daniel@rebootproject.mx
- * @package Reboot Project
+ * @package rebootproject
  */
 get_header()
 ?>
 
 <div class="container">
-	<div class="row">
-		<img src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:100%">
-
-	</div>
+	<?php if (get_post_type() != "product") {  ?>
+		<div class="row">
+			<img src="<?php echo get_the_post_thumbnail_url(); ?>" style="width:100%">
+		</div>
+	<?php }  ?>
 </div>
 
 <div class="container">

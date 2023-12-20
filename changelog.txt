@@ -1,5 +1,9 @@
+V 0.6.1
+
+- Removing the jetpack support
+- We are adding customizations in styles and colors
+
 V 0.5.1
 
 - Pages with custom page_type==work are loaded into homepage
 - Make a custom layout for pages with page_type==work
-- We 

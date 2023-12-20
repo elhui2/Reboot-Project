@@ -3,16 +3,16 @@ rbpj-settings-unformatted.css
 version: 0.6.1 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Noto Sans');
-@import url('https://fonts.googleapis.com/css?family=Noto Sans Mono');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Mono');
+@import url('https://fonts.googleapis.com/css?family=IBM Plex Mono');
 
 body {
-    font-family: 'Noto Sans Mono';
+    font-family: 'IBM Plex Mono';
 }
 
 #footer,
 #rbpj-mainnav {
-    background-color: #000000;
+    background-color: #080230;
 }
 
 h1,
@@ -21,8 +21,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: orange;
-    font-family: 'Noto Sans';
+    color: #ea831c;
+    font-family: 'IBM Plex Mono';
 }
 
 a,
@@ -32,5 +32,5 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: orange;
+    color: #ea831c;
 }

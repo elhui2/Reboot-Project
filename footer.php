@@ -2,10 +2,9 @@
 
 /**
  * Footer reboot project
- * @version 0.5.1
- * @author Noel Lopez noel@rebootproject.mx
+ * @version 0.6.5
  * @author Daniel Huidobro daniel@rebootproject.mx
- * @package Reboot Project
+ * @package rebootproject
  */
 
 ?>
@@ -29,7 +28,7 @@
 				<div class="col-md-4 col-pb-sm right-display">
 					<h2>Síguenos</h2>
 					<p class="colorlib-social-icons colorlib-social-icons2">
-						<a href="https://www.facebook.com/rebootprojectmx/" target="_blank"><span style="font-size: 48px; color:white" class="dashicons dashicons-facebook"></span></i></a>
+						<a href="<?php echo get_theme_mod('rbpj_facebook'); ?>" target="_blank"><span style="font-size: 48px; color:white" class="dashicons dashicons-facebook"></span></i></a>
 					</p>
 				</div>
 			</div>
@@ -37,7 +36,7 @@
 	</div>
 </footer>
 </div>
-<script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <?php
 wp_footer();
@@ -47,9 +46,9 @@ if (is_home()) {
 ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/flexslider.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
-	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.flexslider-min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.easing.1.3.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
+	<!-- <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.flexslider-min.js"></script> -->
+	<!-- <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.easing.1.3.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script> -->
 
 	<!-- Counters -->
 	<!-- <script src="js/jquery.countTo.js"></script> -->
@@ -61,55 +60,55 @@ if (is_home()) {
 	<script>
 		$(function() {
 
-			$('#colorlib-hero .flexslider').flexslider({
-				animation: "fade",
-				slideshowSpeed: 5000,
-				directionNav: true,
-				start: function() {
-					setTimeout(function() {
-						$('.slider-text').removeClass('animated fadeInUp');
-						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-					}, 500);
-				},
-				before: function() {
-					setTimeout(function() {
-						$('.slider-text').removeClass('animated fadeInUp');
-						$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-					}, 500);
-				}
+			// $('#colorlib-hero .flexslider').flexslider({
+			// 	animation: "fade",
+			// 	slideshowSpeed: 5000,
+			// 	directionNav: true,
+			// 	start: function() {
+			// 		setTimeout(function() {
+			// 			$('.slider-text').removeClass('animated fadeInUp');
+			// 			$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			// 		}, 500);
+			// 	},
+			// 	before: function() {
+			// 		setTimeout(function() {
+			// 			$('.slider-text').removeClass('animated fadeInUp');
+			// 			$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			// 		}, 500);
+			// 	}
 
-			});
-			var i = 0;
-			$('.animate-box').waypoint(function(direction) {
+			// });
+			// var i = 0;
+			// $('.animate-box').waypoint(function(direction) {
 
-				if (direction === 'down' && !$(this.element).hasClass('animated')) {
+			// 	if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-					i++;
+			// 		i++;
 
-					$(this.element).addClass('item-animate');
-					setTimeout(function() {
+			// 		$(this.element).addClass('item-animate');
+			// 		setTimeout(function() {
 
-						$('body .animate-box.item-animate').each(function(k) {
-							var el = $(this);
-							setTimeout(function() {
-								var effect = el.data('animate-effect');
-								if (effect === 'fadeIn') {
-									el.addClass('fadeIn animated');
-								} else {
-									el.addClass('fadeInUp animated');
-								}
+			// 			$('body .animate-box.item-animate').each(function(k) {
+			// 				var el = $(this);
+			// 				setTimeout(function() {
+			// 					var effect = el.data('animate-effect');
+			// 					if (effect === 'fadeIn') {
+			// 						el.addClass('fadeIn animated');
+			// 					} else {
+			// 						el.addClass('fadeInUp animated');
+			// 					}
 
-								el.removeClass('item-animate');
-							}, k * 200, 'easeInOutExpo');
-						});
+			// 					el.removeClass('item-animate');
+			// 				}, k * 200, 'easeInOutExpo');
+			// 			});
 
-					}, 100);
+			// 		}, 100);
 
-				}
+			// 	}
 
-			}, {
-				offset: '85%'
-			});
+			// }, {
+			// 	offset: '85%'
+			// });
 		});
 	</script>
 <?php
