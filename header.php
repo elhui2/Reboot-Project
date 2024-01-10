@@ -2,12 +2,10 @@
 
 /**
  * header.php
- * @version 0.5.1
- * @author Noel Lopez noel@rebootproject.mx
- * @author Daniel Huidobro daniel@rebootproject.mx
+ * @version 0.6.6
+ * @author  rebootproject.mx
  * @package Reboot Project
  */
-
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -53,20 +51,21 @@
 		<header id="rbpj-mainnav">
 			<div class="container">
 				<div class="row">
+					<div class="col-12">
+						<?php get_search_form(); ?>
+					</div>
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-
 							<?php
-							if (is_front_page()) {
-								integer_site_logo();
-							} else {
-								integer_site_logo(); ?>
-
-								<!-- <a href="<?php echo get_site_url() ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_light.png" width="200"></a> -->
-							<?php
-							}
+							integer_site_logo();
 							?>
 						</div>
+						<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>">
+							<span style="margin:0; color:white" class="dashicons dashicons-cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+						</a>
+						<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" title="<?php _e('View your shopping profile'); ?>">
+							<span style="margin:0; color:white" class="dashicons dashicons-admin-users"></span>
+						</a>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" style="text-decoration: none;">
 							<span style="margin:0; color:white" class="dashicons dashicons-menu-alt3"></span>
 						</a>
