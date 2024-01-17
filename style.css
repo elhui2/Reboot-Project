@@ -5,7 +5,7 @@ Author: Reboot Project
 Author URI: https://www.rebootproject.mx/
 Description: Minimalist template
 Tags: blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.6.5
+Version: 0.6.7
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -275,12 +275,6 @@ h6 {
 header {
   padding: 1rem 0;
   margin: 0 0 1em 0;
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    padding: 2em 0;
-  }
 }
 
 header .colorlib-navbar-brand {
@@ -1498,7 +1492,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   transform: rotateZ(-45deg);
 }
 
-.colorlib-nav-toggle {
+/* .colorlib-nav-toggle {
   float: right;
   z-index: 1003;
   position: relative;
@@ -1506,7 +1500,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   margin: 0 auto;
   cursor: pointer;
   margin-top: 10px;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .colorlib-nav-toggle {

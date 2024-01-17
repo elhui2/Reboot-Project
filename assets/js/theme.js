@@ -1,13 +1,11 @@
 /**
  * theme.js
- * @version 0.6.5
+ * @version 0.6.7
  * Main functions of theme
  */
-; (function () {
 
+jQuery(document).ready(function ($) {
   'use strict';
-
-
 
   // iPad and iPod detection	
   var isiPad = function () {
@@ -21,132 +19,39 @@
     );
   };
 
+  //
+  // burgerMenu();
+  $('.js-colorlib-nav-toggle').on('click', function (event) {
+    event.preventDefault();
+    if ($('body').hasClass('menu-show')) {
+      $('body').removeClass('menu-show');
+      $('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
+    } else {
+      $('body').addClass('menu-show');
+      setTimeout(function () {
+        $('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
+      }, 900);
+    }
+  })
 
-  var fullHeight = function () {
-
-    $('.js-fullheight').css('height', $(window).height());
-    $(window).resize(function () {
-      $('.js-fullheight').css('height', $(window).height());
-    });
-
-  };
-
-  var burgerMenu = function () {
-
-    $('.js-colorlib-nav-toggle').on('click', function (event) {
-      event.preventDefault();
-      var $this = $(this);
-      if ($('body').hasClass('menu-show')) {
-        $('body').removeClass('menu-show');
-        $('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
-      } else {
-        $('body').addClass('menu-show');
-        setTimeout(function () {
-          $('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-        }, 900);
-      }
-    })
-
-    let inDisplay = false;
-    $(".menu-item-has-children").click(function () {
-      let menu = $(this);
-      if (inDisplay) {
-        menu.find("ul").fadeOut();
-        inDisplay = false;
-      } else {
-        menu.find("ul").fadeIn();
-        inDisplay = true;
-      }
-    });
-  };
-
-  // // Animations
-
-  // var contentWayPoint = function () {
-  //   var i = 0;
-  //   $('.animate-box').waypoint(function (direction) {
-
-  //     if (direction === 'down' && !$(this.element).hasClass('animated')) {
-
-  //       i++;
-
-  //       $(this.element).addClass('item-animate');
-  //       setTimeout(function () {
-
-  //         $('body .animate-box.item-animate').each(function (k) {
-  //           var el = $(this);
-  //           setTimeout(function () {
-  //             var effect = el.data('animate-effect');
-  //             if (effect === 'fadeIn') {
-  //               el.addClass('fadeIn animated');
-  //             } else {
-  //               el.addClass('fadeInUp animated');
-  //             }
-
-  //             el.removeClass('item-animate');
-  //           }, k * 200, 'easeInOutExpo');
-  //         });
-
-  //       }, 100);
-
-  //     }
-
-  //   }, { offset: '85%' });
-  // };
-
-  // var counter = function () {
-  //   $('.js-counter').countTo({
-  //     formatter: function (value, options) {
-  //       return value.toFixed(options.decimals);
-  //     },
-  //   });
-  // };
-
-  // var counterWayPoint = function () {
-  //   if ($('#colorlib-counter').length > 0) {
-  //     $('#colorlib-counter').waypoint(function (direction) {
-
-  //       if (direction === 'down' && !$(this.element).hasClass('animated')) {
-  //         setTimeout(counter, 400);
-  //         $(this.element).addClass('animated');
-  //       }
-  //     }, { offset: '90%' });
-  //   }
-  // };
-
-  // // Owl Carousel
-  // var owlCrouselFeatureSlide = function () {
-  //   var owl = $('.owl-carousel1');
-  //   owl.owlCarousel({
-  //     animateOut: 'fadeOut',
-  //     animateIn: 'fadeIn',
-  //     autoplay: true,
-  //     items: 1,
-  //     loop: true,
-  //     margin: 0,
-  //     responsiveClass: true,
-  //     nav: false,
-  //     dots: true,
-  //     smartSpeed: 500,
-  //     autoHeight: true,
-  //     navText: [
-  //       "<i class='icon-arrow-left3 owl-direction'></i>",
-  //       "<i class='icon-arrow-right3 owl-direction'></i>"
-  //     ]
-  //   });
-  // };
-
-  // Document on load.
-  $(function () {
-    burgerMenu();
-    fullHeight();
-
-    // counter();
-    // sliderMain();
-    // counterWayPoint();
-    // contentWayPoint();
-    // owlCrouselFeatureSlide();
+  let inDisplay = false;
+  $(".menu-item-has-children").click(function () {
+    let menu = $(this);
+    if (inDisplay) {
+      menu.find("ul").fadeOut();
+      inDisplay = false;
+    } else {
+      menu.find("ul").fadeIn();
+      inDisplay = true;
+    }
   });
 
+  //
+  // fullHeight();
+  $('.js-fullheight').css('height', $(window).height());
 
-}());
+  $(window).resize(function () {
+    $('.js-fullheight').css('height', $(window).height());
+  });
+
+});

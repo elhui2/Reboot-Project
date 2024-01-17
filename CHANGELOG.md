@@ -1,3 +1,9 @@
+### V 0.6.5
+- Optimizations for main menu
+- Remove obsolete code
+- Section Social in configurations
+- removing iconmoon, revslider and a lot js libraries
+
 # Reboot Project 0.1
 
 Fork de Integer de https://wordpress.org/themes/integer/ from Theme Patio

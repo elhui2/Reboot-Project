@@ -1,4 +1,4 @@
-# Reboot Project 0.6.5
+# Reboot Project 0.6.7
 
 Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
@@ -13,8 +13,11 @@ Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
 - Optimizations for main menu
 - Remove obsolete code
-- Section Social in configurations
+- Social Section in configurations
 - removing iconmoon, revslider and a lot js libraries
+- Updated Bootstrap to 5.X
 
 ### TODO:
 - Layout of categories and blog page
+- Make a efficient proccess for the creation of custom resources
+- Validate all forms with JS

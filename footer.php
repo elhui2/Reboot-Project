@@ -2,7 +2,7 @@
 
 /**
  * Footer reboot project
- * @version 0.6.5
+ * @version 0.6.7
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package rebootproject
  */
@@ -36,84 +36,10 @@
 	</div>
 </footer>
 </div>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<?php
-wp_footer();
 
-if (is_home()) {
-
-?>
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/flexslider.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
-	<!-- <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.flexslider-min.js"></script> -->
-	<!-- <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.easing.1.3.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script> -->
-
-	<!-- Counters -->
-	<!-- <script src="js/jquery.countTo.js"></script> -->
-	<!-- Owl Carousel -->
-	<!-- <script src="js/owl.carousel.min.js"></script> -->
-
-	<!-- Main JS (Do not remove) -->
-	<!-- <script src="js/main.js"></script> -->
-	<script>
-		$(function() {
-
-			// $('#colorlib-hero .flexslider').flexslider({
-			// 	animation: "fade",
-			// 	slideshowSpeed: 5000,
-			// 	directionNav: true,
-			// 	start: function() {
-			// 		setTimeout(function() {
-			// 			$('.slider-text').removeClass('animated fadeInUp');
-			// 			$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-			// 		}, 500);
-			// 	},
-			// 	before: function() {
-			// 		setTimeout(function() {
-			// 			$('.slider-text').removeClass('animated fadeInUp');
-			// 			$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-			// 		}, 500);
-			// 	}
-
-			// });
-			// var i = 0;
-			// $('.animate-box').waypoint(function(direction) {
-
-			// 	if (direction === 'down' && !$(this.element).hasClass('animated')) {
-
-			// 		i++;
-
-			// 		$(this.element).addClass('item-animate');
-			// 		setTimeout(function() {
-
-			// 			$('body .animate-box.item-animate').each(function(k) {
-			// 				var el = $(this);
-			// 				setTimeout(function() {
-			// 					var effect = el.data('animate-effect');
-			// 					if (effect === 'fadeIn') {
-			// 						el.addClass('fadeIn animated');
-			// 					} else {
-			// 						el.addClass('fadeInUp animated');
-			// 					}
-
-			// 					el.removeClass('item-animate');
-			// 				}, k * 200, 'easeInOutExpo');
-			// 			});
-
-			// 		}, 100);
-
-			// 	}
-
-			// }, {
-			// 	offset: '85%'
-			// });
-		});
-	</script>
-<?php
-}
-?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
+<?php wp_footer(); ?>
 
 </body>
 

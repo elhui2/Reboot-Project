@@ -2,7 +2,7 @@
 
 /**
  * header.php
- * @version 0.6.6
+ * @version 0.6.7
  * @author  rebootproject.mx
  * @package Reboot Project
  */
@@ -14,7 +14,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
@@ -51,24 +51,27 @@
 		<header id="rbpj-mainnav">
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						<?php get_search_form(); ?>
-					</div>
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
 							<?php
 							integer_site_logo();
 							?>
 						</div>
-						<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>">
-							<span style="margin:0; color:white" class="dashicons dashicons-cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-						</a>
-						<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" title="<?php _e('View your shopping profile'); ?>">
-							<span style="margin:0; color:white" class="dashicons dashicons-admin-users"></span>
-						</a>
-						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" style="text-decoration: none;">
-							<span style="margin:0; color:white" class="dashicons dashicons-menu-alt3"></span>
-						</a>
+
+
+						<div class="btn-group float-end">
+							<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>" class="btn">
+								<span class="dashicons dashicons-cart text-white"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+							</a>
+							<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" title="<?php _e('View your shopping profile'); ?>" class="btn">
+								<span class="dashicons dashicons-admin-users text-white"></span>
+							</a>
+							<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle btn">
+								<span class="dashicons dashicons-menu-alt3 text-white"></span>
+							</a>
+						</div>
+
+						<?php get_search_form(); ?>
 					</div>
 				</div>
 			</div>
