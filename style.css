@@ -5,7 +5,7 @@ Author: Reboot Project
 Author URI: https://www.rebootproject.mx/
 Description: Minimalist template
 Tags: blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.6.7
+Version: 0.6.8
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -15,18 +15,6 @@ Text Domain: rebootproject
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-
-.slide0 {
-  background-image: url("assets/images/coding_main_0.jpg");
-}
-
-.slide1 {
-  background-image: url("assets/images/coding_main_1.jpg");
-}
-
-.slide2 {
-  background-image: url("assets/images/coding_main_2.jpg");
-}
 
 img {
   max-width: 100%;
@@ -219,7 +207,7 @@ h6 {
   }
 }
 
-#colorlib-main-nav ul .sub-menu{
+#colorlib-main-nav ul .sub-menu {
   display: none;
   padding-top: 0;
   background-color: rgba(69, 69, 69, 0.7);
@@ -230,7 +218,7 @@ h6 {
   margin: 0;
 }
 
-#colorlib-main-nav ul li svg{
+#colorlib-main-nav ul li svg {
   width: 2rem;
   height: 2rem;
 }
@@ -243,12 +231,12 @@ h6 {
   text-transform: uppercase;
 }
 
-#colorlib-main-nav ul li a span{
+#colorlib-main-nav ul li a span {
   font-size: 1em;
   line-height: 1.8em;
 }
 
-#colorlib-main-nav .colorlib-table{
+#colorlib-main-nav .colorlib-table {
   max-width: 480px;
   margin: 0 auto;
 }
@@ -273,7 +261,7 @@ h6 {
 }
 
 header {
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 0;
   margin: 0 0 1em 0;
 }
 
@@ -1164,17 +1152,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   border: 1px solid #ea831c;
 }
 
-.btn {
-  margin-right: 4px;
-  margin-bottom: 4px;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding: 8px 20px;
-}
-
 .btn.btn-md {
   padding: 8px 20px !important;
 }
@@ -1199,31 +1176,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   margin-right: 10px;
 }
 
-.btn-primary {
-  background: #ea831c;
-  color: #fff;
-  border: 2px solid #ea831c;
-}
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background: #ec9033 !important;
-  border-color: #ec9033 !important;
-}
-
-.btn-primary.btn-outline {
-  background: transparent;
-  color: #ea831c;
-  border: 2px solid #ea831c;
-}
-
-.btn-primary.btn-outline:hover,
-.btn-primary.btn-outline:focus,
-.btn-primary.btn-outline:active {
-  background: #ea831c;
-  color: #fff;
-}
 
 .btn-success {
   background: #5cb85c;
@@ -1578,10 +1531,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   border: 2px solid rgba(234, 131, 28, 0.8);
 }
 
-input[type="text"] {
-  height: 50px;
-}
-
 .form-group {
   margin-bottom: 30px;
 }
@@ -1714,6 +1663,25 @@ input[type="text"] {
   color: #41FF00;
 }
 
-.search-form{
-  text-align: right;
+#search-form {
+  justify-content: flex-end;
+}
+
+/* Styles from tablet to lower based in lg bootstrap 5.X */
+@media screen and (max-width: 991px) {
+  #search-container{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  #search-form{
+    justify-content: center;
+  }
+
+  .pt-8{
+    padding-top: 4em;
+  }
 }

@@ -1,6 +1,6 @@
 /**
  * theme.js
- * @version 0.6.7
+ * @version 0.6.8
  * Main functions of theme
  */
 
@@ -52,6 +52,15 @@ jQuery(document).ready(function ($) {
 
   $(window).resize(function () {
     $('.js-fullheight').css('height', $(window).height());
+  });
+
+  const searchButton = document.getElementById("search-button");
+  const searchContainer = document.getElementById("search-container");
+  const rbpjMainNav = document.getElementById("rbpj-mainnav");
+  
+  searchButton.addEventListener("click", () => {
+    searchContainer.classList.toggle("d-none");
+    rbpjMainNav.classList.toggle("pt-8");
   });
 
 });

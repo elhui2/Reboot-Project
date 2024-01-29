@@ -1,4 +1,4 @@
-# Reboot Project 0.6.7
+# Reboot Project 0.6.8
 
 Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
@@ -18,6 +18,6 @@ Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 - Updated Bootstrap to 5.X
 
 ### TODO:
-- Layout of categories and blog page
+- Layout of categories and blog page and search
 - Make a efficient proccess for the creation of custom resources
-- Validate all forms with JS
+- Make a widget in the footer

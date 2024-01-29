@@ -2,8 +2,8 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.6.5
- * @author Daniel Huidobro daniel@rebootproject.mx
+ * @version 0.6.8
+ * @author Reboot Project
  * @package rebootproject
  */
 
@@ -338,7 +338,7 @@ function load_dashicons_front_end()
 }
 /**
  * add_rbpj_settings
- * @version 0.6.1
+ * @version 0.6.8
  */
 function add_rbpj_settings()
 {
@@ -369,8 +369,7 @@ function add_rbpj_settings()
 		wp_enqueue_style(
 			'rbpj-settings',
 			get_stylesheet_directory_uri() . "/assets/css/rbpj-settings.css",
-			array(),
-			$rbpj_css_settings
+			array()
 		);
 	}
 }

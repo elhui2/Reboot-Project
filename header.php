@@ -2,7 +2,7 @@
 
 /**
  * header.php
- * @version 0.6.7
+ * @version 0.6.8
  * @author  rebootproject.mx
  * @package Reboot Project
  */
@@ -49,29 +49,39 @@
 
 		<?php endif; ?>
 		<header id="rbpj-mainnav">
-			<div class="container">
+			<div class="container ">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="colorlib-navbar-brand">
-							<?php
-							integer_site_logo();
-							?>
+					<div class="col-5">
+						<?php
+						integer_site_logo();
+						?>
+					</div>
+					<div class="col-7">
+
+						<div id="search-container" class="d-none d-lg-block animate__animated animate__fadeInDown">
+							<?php get_search_form(); ?>
 						</div>
 
-
-						<div class="btn-group float-end">
-							<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>" class="btn">
-								<span class="dashicons dashicons-cart text-white"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-							</a>
-							<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" title="<?php _e('View your shopping profile'); ?>" class="btn">
-								<span class="dashicons dashicons-admin-users text-white"></span>
-							</a>
+						<div class="btn-group float-end mt-2">
+							<button type="button" class="btn d-lg-none" id="search-button">
+								<span class="dashicons dashicons-search text-white"></span>
+							</button>
+							<?php
+							if (class_exists('WooCommerce')) {
+							?>
+								<a href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>" class="btn">
+									<span class="dashicons dashicons-cart text-white"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+								</a>
+								<a href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>" title="<?php _e('View your shopping profile'); ?>" class="btn">
+									<span class="dashicons dashicons-admin-users text-white"></span>
+								</a>
+							<?php	// code that requires WooCommerce
+							}
+							?>
 							<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle btn">
 								<span class="dashicons dashicons-menu-alt3 text-white"></span>
 							</a>
 						</div>
-
-						<?php get_search_form(); ?>
 					</div>
 				</div>
 			</div>
