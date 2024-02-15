@@ -2,8 +2,8 @@
 
 /**
  * Footer reboot project
- * @version 0.6.7
- * @author Daniel Huidobro daniel@rebootproject.mx
+ * @version 0.6.9
+ * @author rebootproject
  * @package rebootproject
  */
 
@@ -12,18 +12,27 @@
 	<div id="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-pb-sm">
-					<p>
-						<span class="block">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							<?php integer_site_logo(); ?><br>
-							<small>Made with <a href="https://github.com/elhui2/Reboot-Project"><i class="fas fa-heart"></i> Copyleft</a> &copy;
-								<script>
-									document.write(new Date().getFullYear());
-								</script>
-							</small><br>
-						</span>
-					</p>
+				<div class="col-md-4 col-pb-sm">
+					<?php if (is_active_sidebar('sidebar-1')) : ?>
+
+						<div class="widget-area-secondary__wrap">
+
+							<?php dynamic_sidebar('sidebar-1'); ?>
+
+						</div>
+
+					<?php endif; ?>
+				</div>
+				<div class="col-md-4 col-pb-sm">
+					<?php if (is_active_sidebar('sidebar-2')) : ?>
+
+						<div class="widget-area-secondary__wrap">
+
+							<?php dynamic_sidebar('sidebar-2'); ?>
+
+						</div>
+
+					<?php endif; ?>
 				</div>
 				<div class="col-md-4 col-pb-sm right-display">
 					<h2>Síguenos</h2>

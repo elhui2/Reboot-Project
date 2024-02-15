@@ -2,7 +2,7 @@
 
 /**
  * The main template file.
- * @version 0.4
+ * @version 0.6.9
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package RebootProject
@@ -33,6 +33,6 @@ get_header(); ?>
 </div>
 <?php bootstrap_posts_pagination(); ?>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer();

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages.
- *
+ * @version 0.6.9
  * @package Integer
  */
 
@@ -23,6 +23,6 @@ get_header(); ?>
 
 </div>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer();
