@@ -2,7 +2,7 @@
 
 /**
  * header.php
- * @version 0.6.8
+ * @version 0.6.10
  * @author  rebootproject.mx
  * @package Reboot Project
  */
@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 
 	<nav id="colorlib-main-nav" role="navigation">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white" class="dashicons dashicons-no"></span></a>
+		<a id="burger-close" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white" class="dashicons dashicons-no"></span></a>
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<?php
@@ -78,7 +78,7 @@
 							<?php	// code that requires WooCommerce
 							}
 							?>
-							<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle btn">
+							<a id="burger" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle btn">
 								<span class="dashicons dashicons-menu-alt3 text-white"></span>
 							</a>
 						</div>

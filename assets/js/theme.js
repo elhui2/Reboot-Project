@@ -1,6 +1,6 @@
 /**
  * theme.js
- * @version 0.6.9
+ * @version 0.6.10
  * Main functions of theme
  */
 
@@ -20,31 +20,28 @@ let isiPhone = function () {
   );
 };
 
-let burger = document.getElementsByClassName("js-colorlib-nav-toggle");
-burger.on('click', (event) => {
+// Seleccionar el elemento con el ID 'colorlib-main-nav'
+let colorlibMainNav = document.getElementById('colorlib-main-nav');
+let colorlibNavToggleInsideMainNav = colorlibMainNav.querySelector('.js-colorlib-nav-toggle');
+
+const burger = document.getElementById("burger");
+burger.addEventListener('click', (event) => {
+  console.log("Menu Open");
   event.preventDefault();
   let body = document.body;
+  body.classList.add('menu-show');
+  setTimeout(function () {
+    colorlibNavToggleInsideMainNav.classList.add('show');
+  }, 900);
+});
 
-  // Seleccionar el elemento con el ID 'colorlib-main-nav'
-  let colorlibMainNav = document.getElementById('colorlib-main-nav');
-
-  // Seleccionar el elemento con la clase 'js-colorlib-nav-toggle' dentro de '#colorlib-main-nav'
-  let colorlibNavToggleInsideMainNav = colorlibMainNav.querySelector('.js-colorlib-nav-toggle');
-
-  // Verificar si el cuerpo tiene la clase 'menu-show'
-  if (body.classList.contains('menu-show')) {
-    // Si tiene la clase, quitarla
-    body.classList.remove('menu-show');
-    colorlibNavToggleInsideMainNav.classList.remove('show');
-  } else {
-    // Si no tiene la clase, agregarla
-    body.classList.add('menu-show');
-
-    // Esperar 900 milisegundos (0.9 segundos) y luego agregar la clase 'show'
-    setTimeout(function () {
-      colorlibNavToggleInsideMainNav.classList.add('show');
-    }, 900);
-  }
+const burgerClose = document.getElementById("burger-close");
+burgerClose.addEventListener('click', (event) => {
+  console.log("Menu Close");
+  event.preventDefault();
+  let body = document.body;
+  body.classList.remove('menu-show');
+  colorlibNavToggleInsideMainNav.classList.remove('show');
 });
 
 // Seleccionar todos los elementos con la clase 'menu-item-has-children'
