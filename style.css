@@ -5,7 +5,7 @@ Author: Reboot Project
 Author URI: https://www.rebootproject.mx/
 Description: Minimalist template
 Tags: blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.6.9
+Version: 0.7.0
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -33,8 +33,6 @@ img {
 *
 * ======================================================= */
 body {
-  /* line-height: 1.8; */
-  /* font-size: 20px; */
   background: #f0f0f0;
   font-weight: 300;
   letter-spacing: 1px;
@@ -65,23 +63,6 @@ a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
-/* a {
-  color: #ea831c;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ea831c;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
- */
 
 p,
 span {
@@ -140,7 +121,7 @@ h6 {
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1002;
   /* text-align: center; */
   visibility: hidden;
@@ -160,13 +141,13 @@ h6 {
   height: 50px;
   width: 50px;
   background: rgba(0, 0, 0, 0.1);
-  line-height: 0;
   padding: 0 !important;
   visibility: hidden;
   opacity: 0;
   border-radius: 50%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-align: center;
 }
 
 #colorlib-main-nav .colorlib-nav-toggle:hover {
@@ -275,6 +256,10 @@ header .colorlib-navbar-brand .colorlib-logo {
   color: #fff;
   font-weight: 200;
   letter-spacing: 5px;
+}
+
+a.colorlib-logo img{
+  height: auto;
 }
 
 header .colorlib-navbar-brand .colorlib-logo:hover {
@@ -1400,6 +1385,10 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   padding: 3em 0;
   display: block;
   width: 100%;
+}
+
+#footer h4,#footer a{
+  color: #fff;
 }
 
 #footer h2 {

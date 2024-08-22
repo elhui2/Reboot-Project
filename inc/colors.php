@@ -2,7 +2,7 @@
 
 /**
  * Typography Settings
- * @version 0.6.1
+ * @version 0.7.0
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * @package RebootProject
  */
@@ -51,6 +51,18 @@ function rbpj_colors($wp_customize)
 		'label' => __('Links Color', 'integer'),
 		'section' => 'colors',
 		'description' => sprintf(__('Used in all <a> tags', 'integer')),
+	));
+
+	$wp_customize->add_setting('rbpj_buttons_color', array(
+		'default'           => '#ea831c',
+		// 'sanitize_callback' => 'sanitize_text'
+	));
+
+	$wp_customize->add_control('rbpj_buttons_color', array(
+		'type' => 'text',
+		'label' => __('Buttons Color', 'integer'),
+		'section' => 'colors',
+		'description' => sprintf(__('Used in default buttons', 'integer')),
 	));
 }
 

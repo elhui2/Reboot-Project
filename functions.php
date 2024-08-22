@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.6.8
+ * @version 0.7.0
  * @author Reboot Project
  * @package rebootproject
  */
@@ -338,7 +338,7 @@ function load_dashicons_front_end()
 }
 /**
  * add_rbpj_settings
- * @version 0.6.8
+ * @version 0.7.0
  */
 function add_rbpj_settings()
 {
@@ -351,6 +351,7 @@ function add_rbpj_settings()
 		// Typography
 		$rbpj_primary_typography = get_theme_mod('rbpj_primary_typography');
 		$rbpj_secondary_typography = get_theme_mod('rbpj_secondary_typography');
+		$rbpj_buttons_color = get_theme_mod('rbpj_buttons_color');
 
 
 		$rbpj_css_settings = file_get_contents(get_template_directory() . '/assets/css/rbpj-settings-unformatted.css');
@@ -358,6 +359,7 @@ function add_rbpj_settings()
 		$rbpj_css_settings = str_replace("[rbpj_primary_background]", $rbpj_primary_background, $rbpj_css_settings);
 		$rbpj_css_settings = str_replace("[rbpj_headers_color]", $rbpj_headers_color, $rbpj_css_settings);
 		$rbpj_css_settings = str_replace("[rbpj_links_color]", $rbpj_links_color, $rbpj_css_settings);
+		$rbpj_css_settings = str_replace("[rbpj_buttons_color]", $rbpj_buttons_color, $rbpj_css_settings);
 
 		$rbpj_css_settings = str_replace("[rbpj_primary_typography]", $rbpj_primary_typography, $rbpj_css_settings);
 		$rbpj_css_settings = str_replace("[rbpj_secondary_typography]", $rbpj_secondary_typography, $rbpj_css_settings);
@@ -373,4 +375,5 @@ function add_rbpj_settings()
 		);
 	}
 }
+
 add_action('init', 'add_rbpj_settings');

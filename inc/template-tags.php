@@ -26,7 +26,7 @@ function integer_site_logo()
 		$custom_logo_id = get_theme_mod('custom_logo');
 		$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 		printf('<a href="%s" class="colorlib-logo" rel="home" itemprop="url">', esc_url(get_home_url()));
-		echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" width="200">';
+		echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" width="200" height="78">';
 		echo '</a>';
 	}
 }

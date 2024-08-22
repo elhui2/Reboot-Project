@@ -1,6 +1,6 @@
 /* 
 rbpj-settings-unformatted.css
-version: 0.6.1 
+version: 0.7.0 
 */
 
 @import url('https://fonts.googleapis.com/css?family=[rbpj_primary_typography]');
@@ -33,4 +33,19 @@ h4 a,
 h5 a,
 h6 a {
     color: [rbpj_links_color];
+}
+
+a.wp-block-button__link,
+.single_add_to_cart_button.button.alt,
+.checkout-button.button.alt,
+.btn-primary{
+    background-color: [rbpj_buttons_color] !important;
+    border-color: [rbpj_buttons_color] !important;
+}
+a.wp-block-button__link:hover,
+.single_add_to_cart_button.button.alt:hover,
+.checkout-button.button.alt:hover,
+.btn-primary:hover{
+    background-color: black !important;
+    border-color: [rbpj_buttons_color] !important;
 }

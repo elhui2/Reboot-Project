@@ -2,7 +2,7 @@
 
 /**
  * header.php
- * @version 0.6.10
+ * @version 0.7.0
  * @author  rebootproject.mx
  * @package Reboot Project
  */
@@ -14,14 +14,14 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" rel="preload">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 	<nav id="colorlib-main-nav" role="navigation">
-		<a id="burger-close" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white" class="dashicons dashicons-no"></span></a>
+		<a id="burger-close" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white; line-height: 50px" class="dashicons dashicons-no" ></span></a>
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<?php
@@ -63,7 +63,7 @@
 						</div>
 
 						<div class="btn-group float-end mt-2">
-							<button type="button" class="btn d-lg-none" id="search-button">
+							<button type="button" class="btn d-lg-none" id="search-button" aria-label="Menu">
 								<span class="dashicons dashicons-search text-white"></span>
 							</button>
 							<?php
