@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.7.0
+ * @version 0.7.1
  * @author Reboot Project
  * @package rebootproject
  */
@@ -377,3 +377,28 @@ function add_rbpj_settings()
 }
 
 add_action('init', 'add_rbpj_settings');
+
+/**
+ * add_rbpj_metas
+ * @version 0.7.1
+ * Seo Tags
+ */
+function add_rbpj_metas() {
+	//return json_encode(get_post());
+	//die(json_encode(get_post()));
+	$post = get_post();
+	$description = get_the_excerpt();
+	$img = get_the_post_thumbnail_url($post->ID,640);
+	?>
+	<meta property="og:title" content="<?php echo $post->post_title ?>" />
+
+	<meta name="description" content="<?php echo htmlspecialchars(strip_tags($description)) ?>" />
+	<meta property="og:description" content="<?php echo htmlspecialchars(strip_tags($description)) ?>" />
+	<meta property="og:url" content="<?php echo the_permalink() ?>" />
+	<?php if(!empty($img)){ ?>
+	<meta property="og:image" content="<?php echo $img ?>" />
+    <?php 
+	}
+	return;
+ }
+ add_action( 'wp_head', 'add_rbpj_metas',1);

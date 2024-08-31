@@ -1,4 +1,4 @@
-# Reboot Project 0.7.0
+# Reboot Project 0.7.1
 
 Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
@@ -11,10 +11,9 @@ Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
 ### Changes in this version
 
-- Script theme.js cambiado de jquery a js
-- Add button color in theme customization
-- Fix bugs
+- Add seo meta descriptions
 
 ### TODO:
 - Layout of categories and blog page and search
 - Make a efficient proccess for the creation of custom css resources
+- Clean unused css and js from colorlib and friends
