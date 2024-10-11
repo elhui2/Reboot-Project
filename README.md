@@ -1,4 +1,4 @@
-# Reboot Project 0.7.1
+# Reboot Project 0.7.2
 
 Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 
@@ -12,8 +12,11 @@ Fork of Integer de https://wordpress.org/themes/integer/ from Theme Patio
 ### Changes in this version
 
 - Add seo meta descriptions
+- Custom login/regiter
+- Pimp css prices
 
 ### TODO:
 - Layout of categories and blog page and search
 - Make a efficient proccess for the creation of custom css resources
 - Clean unused css and js from colorlib and friends
+- Override styles with bootstrap ones

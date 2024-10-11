@@ -2,10 +2,12 @@
 
 /**
  * Page Work template
- * @version 0.4
+ * @version 0.7.2
  * @author Noel Lopez noel@rebootproject.mx
  * @author Daniel Huidobro daniel@rebootproject.mx
  * @package Reboot Project
+ * @deprecated V 0.7.2
+ * No se usa
  */
 /* Template Name: Work */
 get_header(); ?>

@@ -1,18 +1,18 @@
 /* 
 rbpj-settings-unformatted.css
-version: 0.6.1 
+version: 0.7.2
 */
 
-@import url('https://fonts.googleapis.com/css?family=IBM Plex Mono');
-@import url('https://fonts.googleapis.com/css?family=IBM Plex Mono');
+@import url('https://fonts.googleapis.com/css?family=Handjet');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-    font-family: 'IBM Plex Mono';
+    font-family: 'Montserrat';
 }
 
 #footer,
 #rbpj-mainnav {
-    background-color: #080230;
+    background-color: red;
 }
 
 h1,
@@ -21,8 +21,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: #ea831c;
-    font-family: 'IBM Plex Mono';
+    color: green;
+    font-family: 'Handjet';
 }
 
 a,
@@ -32,5 +32,28 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #ea831c;
+    color: blue;
+}
+
+a.wp-block-button__link,
+.single_add_to_cart_button.button.alt,
+.checkout-button.button.alt,
+.btn-primary {
+    background-color: pink !important;
+    border-color: pink !important;
+}
+
+a.wp-block-button__link:hover,
+.single_add_to_cart_button.button.alt:hover,
+.checkout-button.button.alt:hover,
+.btn-primary:hover {
+    background-color: black !important;
+    border-color: pink !important;
+}
+
+span.woocommerce-Price-amount,
+.woocommerce-Price-currencySymbol,
+.wc-block-formatted-money-amount {
+    color: pink;
+    font-size: 2rem;
 }

@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.7.1
+ * @version 0.7.2
  * @author Reboot Project
  * @package rebootproject
  */
@@ -10,7 +10,7 @@
 /**
  * The current version of the theme.
  */
-define('REBOOT_PROJECT', '0.6.5');
+define('REBOOT_PROJECT', '0.7.2');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -325,6 +325,11 @@ require get_template_directory() . '/inc/colors.php';
 require get_template_directory() . '/inc/social.php';
 
 /**
+ * Auth
+ */
+require get_template_directory() . '/inc/auth.php';
+
+/**
  * Customizer Custom Controls.
  */
 require get_template_directory() . '/inc/class-integer-customize-control-message.php';
@@ -380,25 +385,38 @@ add_action('init', 'add_rbpj_settings');
 
 /**
  * add_rbpj_metas
- * @version 0.7.1
+ * @version 0.7.2
  * Seo Tags
  */
-function add_rbpj_metas() {
+function add_rbpj_metas()
+{
 	//return json_encode(get_post());
 	//die(json_encode(get_post()));
 	$post = get_post();
 	$description = get_the_excerpt();
-	$img = get_the_post_thumbnail_url($post->ID,640);
-	?>
+	$img = get_the_post_thumbnail_url($post->ID, 640);
+?>
 	<meta property="og:title" content="<?php echo $post->post_title ?>" />
 
 	<meta name="description" content="<?php echo htmlspecialchars(strip_tags($description)) ?>" />
+	<?php
+	$my_tags = get_terms('product_tag');
+	if ($my_tags) {
+		foreach ($my_tags as $tag) {
+			$tag_names[] = $tag->name;
+		}
+		if (!empty($tag_names)) {
+	?>
+			<meta name="keywords" content="<?php echo implode(', ', $tag_names) ?>">
+	<?php
+		}
+	}
+	?>
 	<meta property="og:description" content="<?php echo htmlspecialchars(strip_tags($description)) ?>" />
 	<meta property="og:url" content="<?php echo the_permalink() ?>" />
-	<?php if(!empty($img)){ ?>
-	<meta property="og:image" content="<?php echo $img ?>" />
-    <?php 
+	<?php if (!empty($img)) { ?>
+		<meta property="og:image" content="<?php echo $img ?>" />
+<?php
 	}
-	return;
- }
- add_action( 'wp_head', 'add_rbpj_metas',1);
+}
+add_action('wp_head', 'add_rbpj_metas', 1);

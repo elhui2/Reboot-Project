@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying all pages.
- * @version 0.6.9
- * @package Integer
+ * The template for displaying un half page size.
+ * @version 0.7.2
+ * @package Reboot Project
  */
 
 get_header(); ?>
