@@ -13,7 +13,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package RebootProject
- * @version 0.7.2
+ * @version 0.7.3
  */
 
 if (! defined('ABSPATH')) {
@@ -55,7 +55,7 @@ do_action('woocommerce_before_customer_login_form'); ?>
 
         </p>
         <p>
-            <a href="<?php echo get_permalink(68); ?>">¿Ya tienes una cuenta?</a>
+            <a href="<?php echo get_permalink(336);//hardcode ?>">¿Ya tienes una cuenta?</a>
         </p>
         <?php do_action('woocommerce_register_form_end'); ?>
     </form>

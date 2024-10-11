@@ -2,7 +2,7 @@
 
 /**
  * Auth
- * @version 0.7.2
+ * @version 0.7.3
  * @package RebootProject
  */
 function wp_rbpj_login_form()
@@ -34,7 +34,7 @@ function wp_rbpj_login_form()
                 <a href="<?php echo esc_url(wp_lostpassword_url()); ?>"><?php esc_html_e('Lost your password?', 'woocommerce'); ?></a>
             </p>
             <p>
-                <a href="<?php echo get_permalink(13); ?>">Crear cuenta</a>
+                <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Crear cuenta</a>
             </p>
             <?php do_action('woocommerce_login_form_end'); ?>
         </form>
