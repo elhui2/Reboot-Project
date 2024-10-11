@@ -2,7 +2,7 @@
 
 /**
  * header.php
- * @version 0.7.0
+ * @version 0.7.4
  * @author  rebootproject.mx
  * @package Reboot Project
  */
@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 
 	<nav id="colorlib-main-nav" role="navigation">
-		<a id="burger-close" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;"><span style="margin:0; color:white; line-height: 50px" class="dashicons dashicons-no" ></span></a>
+		<a id="burger-close" href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active" style="text-decoration: none;" aria-label="Main Menu"><span style="margin:0; color:white; line-height: 50px" class="dashicons dashicons-no" ></span></a>
 		<div class="js-fullheight colorlib-table">
 			<div class="colorlib-table-cell js-fullheight">
 				<?php

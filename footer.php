@@ -2,7 +2,7 @@
 
 /**
  * Footer reboot project
- * @version 0.6.9
+ * @version 0.7.4
  * @author rebootproject
  * @package rebootproject
  */
@@ -37,7 +37,7 @@
 				<div class="col-md-4 col-pb-sm right-display">
 					<h2>Síguenos</h2>
 					<p class="colorlib-social-icons colorlib-social-icons2">
-						<a href="<?php echo get_theme_mod('rbpj_facebook'); ?>" target="_blank"><span style="font-size: 48px; color:white" class="dashicons dashicons-facebook"></span></i></a>
+						<a href="<?php echo get_theme_mod('rbpj_facebook'); ?>" target="_blank" aria-label="Facebook Profile"><span style="font-size: 48px; color:white" class="dashicons dashicons-facebook"></span></i></a>
 					</p>
 				</div>
 			</div>
