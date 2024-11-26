@@ -2,7 +2,7 @@
 
 /**
  * Reboot Project functions and definitions.
- * @version 0.7.2
+ * @version 0.7.5
  * @author Reboot Project
  * @package rebootproject
  */
@@ -390,11 +390,14 @@ add_action('init', 'add_rbpj_settings');
  */
 function add_rbpj_metas()
 {
-	//return json_encode(get_post());
-	//die(json_encode(get_post()));
 	$post = get_post();
 	$description = get_the_excerpt();
-	$img = get_the_post_thumbnail_url($post->ID, 640);
+	if (is_front_page()) {
+		$img = "https://www.yofy.com.mx/wp-content/uploads/2024/10/dia-de-muertos-2024.jpg"; //TODO: Hardcode Contenido administrable desde el theme
+	} else {
+		$img = get_the_post_thumbnail_url($post->ID, 640);
+	}
+
 ?>
 	<meta property="og:title" content="<?php echo $post->post_title ?>" />
 
